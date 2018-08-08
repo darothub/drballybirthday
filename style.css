@@ -1,24 +1,46 @@
-body, #slider, .wrap, .slide-content{
+body, #slider, .slide-content{
     margin:0;
     padding: 0;
-    font-family: sapphie;
-    width:100%;
-    height: 100vh;
+    font-family: sapphie;    
     overflow: auto;
     
 }
+
+
+@media only screen and (max-width:500px){
+    body{
+        background-color:white;
+        
+    }
+    .wrap{
+        max-width: 100%;
+        max-height: 100%;
+        background-image:none;
+        
+    }
+    #slider{
+        width:100%;
+        height:50vh;
+        
+    }
+
+    
+    
+    
+    
+}
+
 @font-face{
     font-family: 'sapphie';
     src: url('font/HelloMorgan.ttf')
 }
 nav{
    
-    width:400px;
+    max-width:400px;
     height: 50px;
     margin: 0 auto;
     background-color: plum;
-    
-    
+   
     
 }
 nav ul{
@@ -33,12 +55,17 @@ a{
     text-decoration: none;
 }
 
-audio{
-    position: absolute;
-    top:30px;
+
+.audio{
+    width: 270px;
+    height: 40px;
+    margin: 0px auto;
+    
 }
 
 h3{
+    margin: 0 auto;
+    left:50%;
     font-family: sapphie;
     color:green;
     font-size: 50px;
@@ -46,11 +73,15 @@ h3{
 }
 
 .wrap{
+    max-width: 100vw;
+    height: 100%;
     position: relative;
     background-image: url('img/cakes.jpg');
     background-size:cover;
+    background-repeat: no-repeat;
 }
 .slide{
+    margin: 50px auto;
     background-size:contain;
     background-position:center;
     background-repeat: no-repeat;
@@ -88,7 +119,12 @@ h3{
     text-align: center;
 }
 .slide-content span{
-    font-size: 5rem;
+    position: relative;
+    width:150px;
+    height:250px;
+    margin: 500px auto;
+    text-align: center;
+    font-size: 2em;
     color: blue;
 }
 
@@ -103,13 +139,13 @@ h3{
 }
 
 #arrow-left{
-    border-width: 30px 40px 30px 0;
+    border-width: 20px 20px 20px 0;
     border-color: transparent #000 transparent transparent;
     left:0;
     margin-left: 30px;
 }
 #arrow-right{
-    border-width: 30px 0 30px 40px;
+    border-width: 20px 0 20px 20px;
     border-color: transparent transparent transparent #000;
     right:0;
     margin-right: 30px;
