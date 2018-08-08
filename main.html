@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Happy Birthday Sapphie</title>
+</head>
+<body>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html" id="Home">Home</a></li>
+        </ul>
+    </nav>
+    
+    <h3>Happy Birthday</h3>
+    <div class="wrap">
+        <audio src="Sia1.mp3" controls></audio>
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <span>Sapphire Blues</span>
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <span>Endurance</span>
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <span>Dr. Bally</span>
+                </div>
+            </div>
+            <div class="slide slide4">
+                <div class="slide-content">
+                    <span>Omo Daddy</span>
+                </div>
+            </div>  
+            <div class="slide slide5">
+                <div class="slide-content">
+                    <span>Omo Mummy</span>
+                </div>
+            </div>  
+            <div class="slide slide6">
+                <div class="slide-content">
+                    <span>Boys Marshall</span>
+                </div>
+            </div>  
+            <div class="slide slide7">
+                <div class="slide-content">
+                    <span>Adesuwa</span>
+                </div>
+            </div> 
+            <div class="slide slide8">
+                    <div class="slide-content">
+                        <span>Love &hearts; from me to you</span>
+                    </div>
+                </div> 
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+    </div>
+    
+
+    <script>
+        let sliderImages = document.querySelectorAll('.slide'),
+            arrowLeft = document.querySelector('#arrow-left'),
+            arrowRight = document.querySelector('#arrow-right'),
+            current = 0;
+        
+        const reset =()=>{
+            for(let i= 0; i < sliderImages.length; i++){
+                sliderImages[i].style.display = 'none';
+            }
+        }
+
+        // Init slider
+        const startSlide =()=>{
+            reset();
+            sliderImages[0].style.display = 'block';
+
+        }
+
+        //Show prev
+        const slideLeft =()=>{
+            reset();
+            sliderImages[current - 1].style.display = 'block';
+            current--;
+        }
+        //Show next
+        const slideRight =()=>{
+            reset();
+            sliderImages[current + 1].style.display = 'block';
+            current++
+        }
+
+          //Right click arrow
+          arrowRight.addEventListener('click', ()=>{
+            if(current === sliderImages.length-1){
+                current = -1;
+            }
+            slideRight();
+        });
+
+        //Left click arrow
+        arrowLeft.addEventListener('click', ()=>{
+            if(current === 0){
+                current = sliderImages.length;
+            }
+            slideLeft();
+        });
+        startSlide();
+
+    </script>
+    
+</body>
+</html>

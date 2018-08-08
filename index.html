@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <title>Sapphire Blues</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="login">Login</a></li>
+        </ul>
+    </nav>
+    <audio src="Titanic Theme Song My Heart Will Go On Celine Dion.mp3" controls></audio>
+    
+    <section>
+        <div class="message" id="greetings">
+            <h3>Happy Birthday Dearie</h3>
+        </div>
+        
+        <div class="wrapper" id="wrap">
+            <div class="container">
+                <form>
+                    <input type="text" placeholder="Name" id="name" class="input">
+                    <input type="password" placeholder="Enter the password" id="password" class="input">
+                    <div class="btn"><a href="" id="enter">Enter</a></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    let login = document.getElementById('login')
+    let wrapper = document.getElementById('wrap');
+    let greeting = document.getElementById('greetings');
+    let enter = document.getElementById('enter');
+    
+    
+    //To show login form
+    const showForm =()=>{
+        if(wrapper.style.display == 'block'){
+            wrapper.style.display = 'none';
+            greeting.style.display = 'block'
+            return false;
+        }
+        wrapper.style.display = 'block';
+        greeting.style.display = 'none'
+    }
+    login.addEventListener('click', showForm);
+
+    //To open slider page
+
+    const enterPage =()=>{
+        let name = document.getElementById('name').value;
+        let password = document.getElementById('password').value;
+        
+
+        if(name == 'Sapphie' && password == 'Darotudeen'){
+            window.open('http://127.0.0.1:5500/main.html');
+           
+        }
+        alert("You are not Sapphie Gerarahia lol")
+    }
+    enter.addEventListener('click', enterPage);
+       
+    
+    </script>
+    
+</body>
+</html>
