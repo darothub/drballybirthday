@@ -4,9 +4,37 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: url('../img/cake.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0.8;
     
     font-weight: bold;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        background-image: url('../img/image4.jpeg');
+        background-size:cover;
+        background-repeat: repeat;
+    }
+    .wrapper{
+        max-width: 250px;
+        height:400px;
+        
+        
+    }
+    .input{
+        max-width: 50%;
+        height:20%;
+        
+    }
+
+    h3{
+        
+        color:white;
+        
+    }
+    
+    
 }
 
 @font-face{
@@ -14,18 +42,26 @@ body{
     src: url('../font/hazel\ grace.ttf')
 }
 
-audio{
-    margin: 0;
+section{
+    max-width: 100%;
+    max-height: 100vh;
+
+}
+
+section .audio{
+    width: 270px;
+    height: 40px;
+    margin: 0px auto;
+    
 }
 
 nav{
    
-    width:400px;
+    max-width:400px;
     height: 50px;
     margin: 0 auto;
     background-color: plum;
-    
-    
+   
     
 }
 nav ul{
@@ -74,6 +110,8 @@ h3{
     background-color: plum;
     opacity:.8;
 }
+
+
 
 .container form{
     display: inline-block;
